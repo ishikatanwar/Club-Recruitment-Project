@@ -1,0 +1,202 @@
+/* src/components/ClubOfficerDashboard.css */
+
+/* Vibrant Color Palette */
+:root {
+    --primary-blue: #1a73e8;
+    --accent-orange: #ff6f00;
+    --light-bg: #f5f7fa;
+    --card-bg: #ffffff;
+    --text-dark: #2c3e50;
+    --text-muted: #7f8c8d;
+    --green-status: #2ecc71;
+    --red-status: #e74c3c;
+}
+
+body {
+    background-color: var(--light-bg);
+}
+
+.officer-dashboard-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--light-bg);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.officer-dashboard-title {
+    text-align: center;
+    color: var(--primary-blue);
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.officer-dashboard-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.dashboard-card {
+    background-color: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-card h3 {
+    color: var(--text-dark);
+    margin-top: 0;
+    border-bottom: 3px solid var(--primary-blue);
+    padding-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.events-list, .apps-list, .feedback-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.event-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #e6f7ff; /* Lighter Blue */
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border: 1px solid #cce8ff;
+    transition: all 0.3s;
+}
+
+.event-item:hover {
+    background-color: #d1eaff;
+}
+
+.event-details h4 {
+    color: var(--text-dark);
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+}
+
+.event-details p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.apps-list li, .feedback-list li {
+    padding: 15px 20px;
+    background-color: var(--light-bg);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border-left: 5px solid var(--accent-orange);
+    transition: all 0.3s;
+}
+
+.apps-list li:hover, .feedback-list li:hover {
+    background-color: #e0e0e0;
+}
+
+.status-pending { color: var(--accent-orange); font-weight: bold; }
+.status-accepted { color: var(--green-status); font-weight: bold; }
+.status-rejected { color: var(--red-status); font-weight: bold; }
+
+.feedback-comment {
+    font-style: italic;
+    color: var(--text-muted);
+    margin-top: 5px;
+}
+
+.qr-button {
+    background-color: var(--accent-orange);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.qr-button:hover {
+    background-color: #e65100;
+}
+
+.qr-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(44, 62, 80, 0.9); /* Darker overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.qr-modal-content {
+    background-color: var(--card-bg);
+    padding: 3rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.qr-modal-content h4 {
+    color: var(--text-dark);
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.qr-modal-content img {
+    width: 250px;
+    height: 250px;
+    margin: 1.5rem 0;
+    border: 2px solid #bdc3c7;
+}
+
+.qr-instruction {
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+.close-button {
+    background-color: var(--red-status);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+    background-color: #c0392b;
+}
+
+.loading, .error {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--red-status);
+}
