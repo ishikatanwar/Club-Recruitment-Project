@@ -21,14 +21,14 @@ A full-stack web application designed to streamline the recruitment process thro
 
 
 ##    🛠️ Tech Stack      ##
-This project is built using a modern MERN-like stack:
+   This project is built using a modern MERN-like stack:
 
-|Category|	        |Technology|                                                                      	|Purpose|
-|:----|             |:---|                                                                             |:---|
-|Frontend|         	|React(JavaScript/CSS)|	                                                           |Building dynamic, role-based user interfaces and dashboards.|
-|Backend|          	|Node.js (Express.js)|	                                                           |Creating a robust RESTful API for routing and business logic.|
-|Database|         	|MongoDB / PostgreSQL / SQLite (if using a .db file locally)|	                     |Data persistence for users, campaigns, and application data.|
-|Key Integrations|  |AI Scoring Service, File Upload System, IoT Communication Layer(Mock/Simulation)|	|Handling specialized platform functionalities.|
+    |Category|	        |Technology|                                                                       	|Purpose|
+    |:----|             |:---|                                                                             |:---|
+    |Frontend|         	|React(JavaScript/CSS)|	                                                           |Building dynamic, role-based user interfaces and dashboards.|
+    |Backend|          	|Node.js (Express.js)|	                                                            |Creating a robust RESTful API for routing and business logic.|
+    |Database|         	|MongoDB / PostgreSQL / SQLite (if using a .db file locally)|	                     |Data persistence for users, campaigns, and application data.|
+    |Key Integrations|  |AI Scoring Service, File Upload System, IoT Communication Layer(Mock/Simulation)|	|Handling specialized platform functionalities.|
 
 ##       Export to Sheets     ##
 🚀 Getting Started
@@ -46,19 +46,20 @@ Ensure you have the following installed:
                cd recruitment-platform
 3. Environment Setup (Critical)
 You must set up your environment variables for both the client and server.
-   -> Create a file named .env inside the /server directory.
-   -> Copy the content from /server/.env.example into your new .env file and replace the dummy values with your actual secrets and connection strings.
 
-|Variable|	           |Description|
-|:---|                 |:----| 
-|PORT|	               |Port for the backend (e.g., 5000)|
-|MONGO_URI / DB_FILE|	 |Connection string for MongoDB or file path for SQLite.|
-|JWT_SECRET|	         |Secret key for user authentication.|
-|AI_SERVICE_URL|   	   |Endpoint for the AI application scoring service.|
-|IOT_API_KEY|   	     |Key for accessing the simulated IoT monitoring data.|
+        -> Create a file named .env inside the /server directory.
+       -> Copy the content from /server/.env.example into your new .env file and replace the dummy values with your actual secrets and connection strings.
+
+        |Variable|	           |Description|
+        |:---|                 |:----| 
+        |PORT|	               |Port for the backend (e.g., 5000)|
+        |MONGO_URI / DB_FILE|	 |Connection string for MongoDB or file path for SQLite.|
+        |JWT_SECRET|	         |Secret key for user authentication.|
+        |AI_SERVICE_URL|   	   |Endpoint for the AI application scoring service.|
+        |IOT_API_KEY|   	     |Key for accessing the simulated IoT monitoring data.|
 
 
-4. Install Dependencies
+5. Install Dependencies
 You need to install dependencies for both the backend and frontend.
          Bash:
 
@@ -73,7 +74,7 @@ You need to install dependencies for both the backend and frontend.
                   # 3. Return to root directory
                     cd ..
 
-5. Database Setup (Seeding)
+6. Database Setup (Seeding)
 If your project uses a database, you must initialize the schema and populate it with initial data.
              Bash:
 
@@ -105,10 +106,10 @@ Start the Frontend (React App)
 ##    🔑 Test Credentials     ##
 Use these credentials to test both user roles after seeding the database:
 
-|Role|        |Username| 	   |Password|
-|:---|        |:-----|       |:---|
-|**Admin**|	      |'admin'|	       |'admin123'|
-|**Recruiter**|	  |'recruiter'|	   |'recruiter123'|
+    |Role|        |Username| 	   |Password|
+    |:---|        |:-----|       |:---|
+    |**Admin**|	      |'admin'|	       |'admin123'|
+    |**Recruiter**|	  |'recruiter'|	   |'recruiter123'|
 
 
 
@@ -116,10 +117,10 @@ Use these credentials to test both user roles after seeding the database:
 ##    🤝 Contribution      ##
 Feel free to report bugs, suggest features, or submit pull requests!
 
-  -> Fork the repository.
-  -> Create your feature branch (git checkout -b feat/my-new-feature).
-  -> Commit your changes (git commit -m 'feat: added new dashboard metric').
-  -> Push to the branch (git push origin feat/my-new-feature).
-  -> Open a Pull Request.
+      -> Fork the repository.
+      -> Create your feature branch (git checkout -b feat/my-new-feature).
+      -> Commit your changes (git commit -m 'feat: added new dashboard metric').
+      -> Push to the branch (git push origin feat/my-new-feature).
+      -> Open a Pull Request.
 
 
