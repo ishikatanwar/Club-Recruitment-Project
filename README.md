@@ -1,70 +1,123 @@
-# Getting Started with Create React App
+##          Recruitment & IoT Management Platform      ##
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack web application designed to streamline the recruitment process through campaign management, applicant scoring (AI integration), and centralized administration with real-time IoT system health monitoring.
 
-## Available Scripts
+ ##           ✨ Features       ##
+ 
+  👩‍💼 Recruiter Pages
+    -> Recruiter Dashboard: Central hub displaying key performance indicators (KPIs) like total applicants, stage conversion rates, and real-time statistics.
+    -> Recruitment Campaigns: Core workflow for creating, managing, and defining stages/deadlines for hiring campaigns.
+    -> Applicant Management: View detailed applicant profiles, resumes (via File Upload System), AI application scores, and move applicants through the custom workflow stages.
+    -> Club Management: Tools for creating and managing club profiles, assigning organizers, and updating club information.
+    -> Analytics & Reports: Detailed insights into AI scoring trends and applicant skill sets.
 
-In the project directory, you can run:
+  👑 Admin Pages
+   -> Admin Dashboard: High-level overview of platform health, including user statistics, system performance, and IoT device status.
+   -> User Management: Functionality to view, manage, and modify user roles (Applicant, Recruiter, Admin).
+   -> Content Management: Pages to manage global platform announcements and terms of service.
+   -> System Monitoring: Dedicated section for viewing system logs, health checks, and a dashboard for IoT Environmental Monitoring and Device Management.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+##    🛠️ Tech Stack      ##
+This project is built using a modern MERN-like stack:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+|Category|	        |Technology|                                                                      	|Purpose|
+|:----|             |:---|                                                                             |:---|
+|Frontend|         	|React(JavaScript/CSS)|	                                                           |Building dynamic, role-based user interfaces and dashboards.|
+|Backend|          	|Node.js (Express.js)|	                                                           |Creating a robust RESTful API for routing and business logic.|
+|Database|         	|MongoDB / PostgreSQL / SQLite (if using a .db file locally)|	                     |Data persistence for users, campaigns, and application data.|
+|Key Integrations|  |AI Scoring Service, File Upload System, IoT Communication Layer(Mock/Simulation)|	|Handling specialized platform functionalities.|
 
-### `npm test`
+##       Export to Sheets     ##
+🚀 Getting Started
+Follow these steps to set up and run the project locally.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Prerequisites
+Ensure you have the following installed:
+        -> Node.js (LTS version)
+        -> Git
 
-### `npm run build`
+2. Clone the Repository
+          Bash:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+               git clone <YOUR_GITHUB_REPO_URL>
+               cd recruitment-platform
+3. Environment Setup (Critical)
+You must set up your environment variables for both the client and server.
+   -> Create a file named .env inside the /server directory.
+   -> Copy the content from /server/.env.example into your new .env file and replace the dummy values with your actual secrets and connection strings.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+|Variable|	           |Description|
+|:---|                 |:----| 
+|PORT|	               |Port for the backend (e.g., 5000)|
+|MONGO_URI / DB_FILE|	 |Connection string for MongoDB or file path for SQLite.|
+|JWT_SECRET|	         |Secret key for user authentication.|
+|AI_SERVICE_URL|   	   |Endpoint for the AI application scoring service.|
+|IOT_API_KEY|   	     |Key for accessing the simulated IoT monitoring data.|
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+4. Install Dependencies
+You need to install dependencies for both the backend and frontend.
+         Bash:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+                  # 1. Install Backend dependencies
+                   cd server
+                   npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+                  # 2. Install Frontend dependencies
+                    cd ../client
+                    npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+                  # 3. Return to root directory
+                    cd ..
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+5. Database Setup (Seeding)
+If your project uses a database, you must initialize the schema and populate it with initial data.
+             Bash:
 
-## Learn More
+                 # Run the database setup script (may vary based on implementation)
+                 # This command typically creates the database file/tables and inserts initial users.
+                 npm run db:setup
+ 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🏃 Running the Application    ##
 
-### Code Splitting
+ You need to start both the server and the client separately.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Start the Backend (API Server)
+       Bash:
+   
+           cd server
+           npm start
+           # Server should run on http://localhost:5000 (or your configured port)
+Start the Frontend (React App)
+        Bash:
+  
+            cd client
+            npm start
+            # Client should open in your browser on http://localhost:3000
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+##    🔑 Test Credentials     ##
+Use these credentials to test both user roles after seeding the database:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+|Role|        |Username| 	   |Password|
+|:---|        |:-----|       |:---|
+|**Admin**|	      |'admin'|	       |'admin123'|
+|**Recruiter**|	  |'recruiter'|	   |'recruiter123'|
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+##    🤝 Contribution      ##
+Feel free to report bugs, suggest features, or submit pull requests!
 
-### `npm run build` fails to minify
+  -> Fork the repository.
+  -> Create your feature branch (git checkout -b feat/my-new-feature).
+  -> Commit your changes (git commit -m 'feat: added new dashboard metric').
+  -> Push to the branch (git push origin feat/my-new-feature).
+  -> Open a Pull Request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
