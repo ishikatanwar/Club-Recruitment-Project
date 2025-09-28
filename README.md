@@ -5,6 +5,7 @@ A full-stack web application designed to streamline the recruitment process thro
  ##           ✨ Features       ##
  
   👩‍💼 Recruiter Pages
+  
     -> Recruiter Dashboard: Central hub displaying key performance indicators (KPIs) like total applicants, stage conversion rates, and real-time statistics.
     -> Recruitment Campaigns: Core workflow for creating, managing, and defining stages/deadlines for hiring campaigns.
     -> Applicant Management: View detailed applicant profiles, resumes (via File Upload System), AI application scores, and move applicants through the custom workflow stages.
@@ -12,10 +13,11 @@ A full-stack web application designed to streamline the recruitment process thro
     -> Analytics & Reports: Detailed insights into AI scoring trends and applicant skill sets.
 
   👑 Admin Pages
-   -> Admin Dashboard: High-level overview of platform health, including user statistics, system performance, and IoT device status.
-   -> User Management: Functionality to view, manage, and modify user roles (Applicant, Recruiter, Admin).
-   -> Content Management: Pages to manage global platform announcements and terms of service.
-   -> System Monitoring: Dedicated section for viewing system logs, health checks, and a dashboard for IoT Environmental Monitoring and Device Management.
+  
+    -> Admin Dashboard: High-level overview of platform health, including user statistics, system performance, and IoT device status.
+    -> User Management: Functionality to view, manage, and modify user roles (Applicant, Recruiter, Admin).
+    -> Content Management: Pages to manage global platform announcements and terms of service.
+    -> System Monitoring: Dedicated section for viewing system logs, health checks, and a dashboard for IoT Environmental Monitoring and Device Management.
 
 
 ##    🛠️ Tech Stack      ##
