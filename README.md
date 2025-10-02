@@ -6,12 +6,12 @@
 
 # The Innovation: AI & IoT Features
 
-    |Feature|	                                     |Technology|	                                 |Benefit|
-    |:---|                                 |:---|                                                |:---|
-    |Smart Club Matching (AI)|	            |Scikit-learn (TF-IDF, Cosine Similarity)|	           |Recommends the top 5 most compatible clubs to students based on their skills, interests, and academic major.|
-    |Real-time Campus Buzz (IoT)|         	|SQLAlchemy/Flask (Tracks recent attendance data)|	   |Displays a live leaderboard of the most active clubs on the homepage, based on recent event check-ins.|
-    |Application & Attendance Tracker|    	|QR Code Generation (Backend)|                       	|Club coordinators can generate unique QR codes for events; students scan the code to instantly mark attendance and track event engagement.|
-    |Intelligent Chatbot|	                 |Flask/Intent-Based NLP|	                             |Provides instant answers to FAQs about joining clubs and event schedules, improving user support.|
+    |Feature|	                                     |Technology|	                                       |Benefit|
+    |:---|                                           |:---|                                                |:---|
+    |Smart Club Matching (AI)|	                     |Scikit-learn (TF-IDF, Cosine Similarity)|	           |Recommends the top 5 most compatible clubs to students based on their skills, interests, and academic major.|
+    |Real-time Campus Buzz (IoT)|                  	|SQLAlchemy/Flask (Tracks recent attendance data)|	   |Displays a live leaderboard of the most active clubs on the homepage, based on recent event check-ins.|     
+    |Application & Attendance Tracker|    	        |QR Code Generation (Backend)|                         |Club coordinators can generate unique QR codes for events; students scan the code to instantly mark attendance and track event engagement.|
+    |Intelligent Chatbot|	                        |Flask/Intent-Based NLP|	                           |Provides instant answers to FAQs about joining clubs and event schedules, improving user support.|
 
 
 ##      Core Features Implemented      ##
@@ -26,14 +26,14 @@
 
 ##       🛠️ Tech Stack      ##
 
-|Category|        	|Technology|        	          |Purpose|
-|:----|            |:----|                        |:----|
-|Backend|         	|Python, Flask|               	|API endpoints, Data processing, Server hosting.|
-|AI/ML|           	|Scikit-learn, TF-IDF|	        |Content-Based Recommendation System.|
-|Frontend|	        |React.js, React Router|	      |Modern, component-based UI and navigation.|
-|Data/State|	      |SQLite, Flask-SQLAlchemy|	    |Database management.|
-|Communication|	   |Axios, Flask-CORS|	           |HTTP requests between frontend and backend.|
-|IoT Tools|       	|qrcode (Python Library)|     	|QR code image generation.|
+     |Category|        	|Technology|        	         |Purpose|
+     |:----|            |:----|                          |:----|
+     |Backend|         	|Python, Flask|               	 |API endpoints, Data processing, Server hosting.|
+     |AI/ML|           	|Scikit-learn, TF-IDF|	         |Content-Based Recommendation System.|
+     |Frontend|	        |React.js, React Router|	     |Modern, component-based UI and navigation.|
+     |Data/State|	    |SQLite, Flask-SQLAlchemy|	     |Database management.|
+     |Communication|    |Axios, Flask-CORS|	             |HTTP requests between frontend and backend.|
+     |IoT Tools|       	|qrcode (Python Library)|        |QR code image generation.|
 
 
 
