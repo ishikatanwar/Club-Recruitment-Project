@@ -1,126 +1,92 @@
-##          Recruitment & IoT Management Platform      ##
+##     College Club Recruitment Platform (AI & IoT Enabled) 🚀    ##
 
-A full-stack web application designed to streamline the recruitment process through campaign management, applicant scoring (AI integration), and centralized administration with real-time IoT system health monitoring.
+#   Project Overview
 
- ##           ✨ Features       ##
+    This project is a modern, full-stack recruitment platform designed to solve the common disconnect between college students and campus organizations. Built for a hackathon, it leverages AI to personalize club discovery and integrates IoT concepts (QR Codes) for real-time engagement tracking.
+
+# The Innovation: AI & IoT Features
+
+    |Feature|	                                     |Technology|	                                 |Benefit|
+    |:---|                                 |:---|                                                |:---|
+    |Smart Club Matching (AI)|	            |Scikit-learn (TF-IDF, Cosine Similarity)|	           |Recommends the top 5 most compatible clubs to students based on their skills, interests, and academic major.|
+    |Real-time Campus Buzz (IoT)|         	|SQLAlchemy/Flask (Tracks recent attendance data)|	   |Displays a live leaderboard of the most active clubs on the homepage, based on recent event check-ins.|
+    |Application & Attendance Tracker|    	|QR Code Generation (Backend)|                       	|Club coordinators can generate unique QR codes for events; students scan the code to instantly mark attendance and track event engagement.|
+    |Intelligent Chatbot|	                 |Flask/Intent-Based NLP|	                             |Provides instant answers to FAQs about joining clubs and event schedules, improving user support.|
+
+
+##      Core Features Implemented      ##
+
+     Club Directory: Comprehensive list with filtering by technical/non-technical tags, open positions, and interview dates.
+
+     Personalized Student Dashboard: Shows individual recommendations, application status (Pending/Accepted), and profile completion status.
+
+     Club Coordinator Dashboard: Management hub to view applications, member feedback, and generate QR codes for events.
+
+     Persistent Profile: Student profiles are saved to the SQLite database and automatically fetched to persist data upon page refresh.
+
+##       🛠️ Tech Stack      ##
+
+|Category|        	|Technology|        	          |Purpose|
+|:----|            |:----|                        |:----|
+|Backend|         	|Python, Flask|               	|API endpoints, Data processing, Server hosting.|
+|AI/ML|           	|Scikit-learn, TF-IDF|	        |Content-Based Recommendation System.|
+|Frontend|	        |React.js, React Router|	      |Modern, component-based UI and navigation.|
+|Data/State|	      |SQLite, Flask-SQLAlchemy|	    |Database management.|
+|Communication|	   |Axios, Flask-CORS|	           |HTTP requests between frontend and backend.|
+|IoT Tools|       	|qrcode (Python Library)|     	|QR code image generation.|
+
+
+
+
+##     🏃 Local Setup and Installation Guide    ##
+
+Follow these steps precisely. You will need two separate terminal windows open simultaneously: one for the Backend and one for the Frontend.
+
+Terminal 1: Backend Setup (Flask Server)
+   ->  1. Navigate to the Backend:
+             
+               Bash
+               cd backend
+   ->  2. Activate Virtual Environment:
+
+              Bash
+              source venv/bin/activate
+
+   ->  3. Install Python Dependencies:
+
+              Bash
+              pip install Flask Flask-SQLAlchemy Flask-Bcrypt scikit-learn nltk qrcode[pil] flask-cors
  
-  👩‍💼 Recruiter Pages
-  
-    -> Recruiter Dashboard: Central hub displaying key performance indicators (KPIs) like total applicants, stage conversion rates, and real-time statistics.
-    -> Recruitment Campaigns: Core workflow for creating, managing, and defining stages/deadlines for hiring campaigns.
-    -> Applicant Management: View detailed applicant profiles, resumes (via File Upload System), AI application scores, and move applicants through the custom workflow stages.
-    -> Club Management: Tools for creating and managing club profiles, assigning organizers, and updating club information.
-    -> Analytics & Reports: Detailed insights into AI scoring trends and applicant skill sets.
+   ->  4. Run the Server: The server will automatically create the site.db file and populate it with dummy data.
 
-  👑 Admin Pages
-  
-    -> Admin Dashboard: High-level overview of platform health, including user statistics, system performance, and IoT device status.
-    -> User Management: Functionality to view, manage, and modify user roles (Applicant, Recruiter, Admin).
-    -> Content Management: Pages to manage global platform announcements and terms of service.
-    -> System Monitoring: Dedicated section for viewing system logs, health checks, and a dashboard for IoT Environmental Monitoring and Device Management.
+             Bash
+             python app.py
+(The backend is now running on http://127.0.0.1:5000. Keep this terminal open.)
 
+Terminal 2: Frontend Setup (React App)
+   ->  1. Navigate to the Frontend: (Go back up one directory, then into the frontend folder)
 
-##    🛠️ Tech Stack      ##
-   This project is built using a modern MERN-like stack:
+             Bash
+             cd ../frontend
+   -> 2. Install JavaScript Dependencies:
 
-    |Category|	        |Technology|                                                                       	|Purpose|
-    |:----|             |:---|                                                                             |:---|
-    |Frontend|         	|React(JavaScript/CSS)|	                                                           |Building dynamic, role-based user interfaces and dashboards.|
-    |Backend|          	|Node.js (Express.js)|	                                                            |Creating a robust RESTful API for routing and business logic.|
-    |Database|         	|MongoDB / PostgreSQL / SQLite (if using a .db file locally)|	                     |Data persistence for users, campaigns, and application data.|
-    |Key Integrations|  |AI Scoring Service, File Upload System, IoT Communication Layer(Mock/Simulation)|	|Handling specialized platform functionalities.|
+             Bash
+             npm install
+   -> 3. Start the Frontend:
 
-##       Export to Sheets     ##
-🚀 Getting Started
-Follow these steps to set up and run the project locally.
+              Bash
+              npm start
+(The website will open automatically at http://localhost:3000.)
 
-1. Prerequisites
-Ensure you have the following installed:
-        -> Node.js (LTS version)
-        -> Git
+#  Demo Credentials
+  ->  Student Profile (for Dashboard Demo): Use the hardcoded ID 1 to view the main demo profile.
 
-2. Clone the Repository
-          Bash:
-
-               git clone <YOUR_GITHUB_REPO_URL>
-               cd recruitment-platform
-3. Environment Setup (Critical)
-You must set up your environment variables for both the client and server.
-
-        -> Create a file named .env inside the /server directory.
-       -> Copy the content from /server/.env.example into your new .env file and replace the dummy values with your actual secrets and connection strings.
-
-        |Variable|	           |Description|
-        |:---|                 |:----| 
-        |PORT|	               |Port for the backend (e.g., 5000)|
-        |MONGO_URI / DB_FILE|	 |Connection string for MongoDB or file path for SQLite.|
-        |JWT_SECRET|	         |Secret key for user authentication.|
-        |AI_SERVICE_URL|   	   |Endpoint for the AI application scoring service.|
-        |IOT_API_KEY|   	     |Key for accessing the simulated IoT monitoring data.|
-
-
-5. Install Dependencies
-You need to install dependencies for both the backend and frontend.
-         Bash:
-
-                  # 1. Install Backend dependencies
-                   cd server
-                   npm install
-
-                  # 2. Install Frontend dependencies
-                    cd ../client
-                    npm install
-
-                  # 3. Return to root directory
-                    cd ..
-
-6. Database Setup (Seeding)
-If your project uses a database, you must initialize the schema and populate it with initial data.
-             Bash:
-
-                 # Run the database setup script (may vary based on implementation)
-                 # This command typically creates the database file/tables and inserts initial users.
-                 npm run db:setup
- 
-
-
-## 🏃 Running the Application    ##
-
- You need to start both the server and the client separately.
-
-Start the Backend (API Server)
-       Bash:
-   
-           cd server
-           npm start
-           # Server should run on http://localhost:5000 (or your configured port)
-Start the Frontend (React App)
-        Bash:
-  
-            cd client
-            npm start
-            # Client should open in your browser on http://localhost:3000
-
-
-
-##    🔑 Test Credentials     ##
-Use these credentials to test both user roles after seeding the database:
-
-    |Role|        |Username| 	   |Password|
-    |:---|        |:-----|       |:---|
-    |**Admin**|	      |'admin'|	       |'admin123'|
-    |**Recruiter**|	  |'recruiter'|	   |'recruiter123'|
+  ->  Club Coordinator Profile: (for Officer Dashboard Demo): Use the hardcoded ID 2 to view the club management dashboard.
 
 
 
 
-##    🤝 Contribution      ##
-Feel free to report bugs, suggest features, or submit pull requests!
 
-      -> Fork the repository.
-      -> Create your feature branch (git checkout -b feat/my-new-feature).
-      -> Commit your changes (git commit -m 'feat: added new dashboard metric').
-      -> Push to the branch (git push origin feat/my-new-feature).
-      -> Open a Pull Request.
+##    License   ##
 
-
+   This project is open-source. Feel free to use and modify it for non-commercial purposes.
