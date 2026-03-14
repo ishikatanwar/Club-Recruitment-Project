@@ -43,36 +43,28 @@
 Follow these steps precisely. You will need two separate terminal windows open simultaneously: one for the Backend and one for the Frontend.
 
 Terminal 1: Backend Setup (Flask Server)
-   ->  1. Navigate to the Backend:
-             
-               Bash
-               cd backend
-   ->  2. Activate Virtual Environment:
+   ->  1. Activate Virtual Environment:
 
               Bash
               source venv/bin/activate
 
-   ->  3. Install Python Dependencies:
+   ->  2. Install Python Dependencies:
 
               Bash
               pip install Flask Flask-SQLAlchemy Flask-Bcrypt scikit-learn nltk qrcode[pil] flask-cors
  
-   ->  4. Run the Server: The server will automatically create the site.db file and populate it with dummy data.
+   ->  3. Run the Server: The server will automatically create the site.db file and populate it with dummy data.
 
              Bash
              python app.py
 (The backend is now running on http://127.0.0.1:5000. Keep this terminal open.)
 
 Terminal 2: Frontend Setup (React App)
-   ->  1. Navigate to the Frontend: (Go back up one directory, then into the frontend folder)
-
-             Bash
-             cd ../frontend
-   -> 2. Install JavaScript Dependencies:
+   -> 1. Install JavaScript Dependencies:
 
              Bash
              npm install
-   -> 3. Start the Frontend:
+   -> 2. Start the Frontend:
 
               Bash
               npm start
