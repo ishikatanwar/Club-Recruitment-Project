@@ -1,0 +1,74 @@
+/* src/components/ApplicationForm.css */
+
+.application-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.application-modal-content {
+    background-color: #fff;
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+}
+
+.modal-close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #555;
+}
+
+.application-modal-content h3 {
+    margin-top: 0;
+    color: #1a73e8;
+    font-size: 1.8rem;
+}
+
+.application-modal-content p {
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.submit-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+.success-message {
+    color: #2ecc71;
+    margin-top: 1.5rem;
+    font-weight: bold;
+}
+
+.error-message {
+    color: #e74c3c;
+    margin-top: 1.5rem;
+    font-weight: bold;
+}
